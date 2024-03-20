@@ -2,19 +2,21 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package model;
+package MainWindow;
 import javax.swing.*;
+import progressBars.ProgressBarGraphics;
 /**
  *
  * @author aly35
  */
 public class LookingForwardMainGui extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form LookingForwardMainGui
      */
     public LookingForwardMainGui() {
         initComponents();
+        setVisible(true);
     }
 
     /**
@@ -50,23 +52,19 @@ public class LookingForwardMainGui extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(ExitButton))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(158, 158, 158)
-                        .addComponent(NewTimerButton)
-                        .addGap(0, 309, Short.MAX_VALUE)))
-                .addContainerGap())
+                .addGap(158, 158, 158)
+                .addComponent(NewTimerButton)
+                .addGap(63, 63, 63)
+                .addComponent(ExitButton)
+                .addContainerGap(180, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(ExitButton)
-                .addGap(27, 242, Short.MAX_VALUE)
-                .addComponent(NewTimerButton)
+                .addContainerGap(271, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(NewTimerButton)
+                    .addComponent(ExitButton))
                 .addContainerGap())
         );
 
@@ -113,6 +111,7 @@ public class LookingForwardMainGui extends javax.swing.JFrame {
         //</editor-fold>
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new LookingForwardMainGui().setVisible(true);  
             }
