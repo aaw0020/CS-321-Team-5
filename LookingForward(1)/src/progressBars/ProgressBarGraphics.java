@@ -5,21 +5,32 @@
 package progressBars;
 import Timer.TimeAndDate;
 import Timer.TimeAndDate;
+import javax.swing.*;
 /**
  *
  * @author aly35
  */
-public class ProgressBarGraphics {
+public class ProgressBarGraphics extends JPanel{
 TimeAndDate startTime;
 TimeAndDate endTime;
 TimeAndDate currentTime;
 
+JProgressBar pbar;
+static int Min;
+static int Max;
 private int percentage;
 
 
-public ProgressBarGraphics()
+public ProgressBarGraphics(TimeAndDate start, TimeAndDate end)
     {
-         
+    startTime = start;
+    endTime = end;
+    currentTime = new TimeAndDate();
+    currentTime.setCurrentTime();
+    
+    pbar = new JProgressBar();
+    
+    
     }
 
 public int PercentageComplete()
